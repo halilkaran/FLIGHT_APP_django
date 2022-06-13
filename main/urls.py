@@ -12,7 +12,7 @@ schema_view = get_schema_view(
       default_version='v0.1',
       description="This is for FRA",
       terms_of_service="#",
-      contact=openapi.Contact(email="rafe@clarusway"),
+      contact=openapi.Contact(email="halilkarancontact@gmail.com"),
       license=openapi.License(name="BSD License"),
    ),
    public=True,
@@ -21,14 +21,14 @@ schema_view = get_schema_view(
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api-auth/', include('rest_framework.urls')),
-    path('swagger(<format>\.json|\.yaml)', schema_view.without_ui(cache_timeout=0), name='schema-json'),
-    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
-    path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
-    path('__debug__/', include('debug_toolbar.urls')),
-    
-    #myapps
-    path('users/', include("users.urls")),
-    path('flight/', include("flight.urls")),
+   path('admin/', admin.site.urls),
+   path('api-auth/', include('rest_framework.urls')),
+   path('swagger(<format>\.json|\.yaml)', schema_view.without_ui(cache_timeout=0), name='schema-json'),
+   path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+   path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
+   path('__debug__/', include('debug_toolbar.urls')),
+   
+   #myapps
+   path('users/', include("users.urls")),
+   path('flight/', include("flight.urls")),
 ]

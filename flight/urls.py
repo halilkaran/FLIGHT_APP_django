@@ -8,4 +8,4 @@ router.register('flights',FlightView)
 
 urlpatterns=[
 ]
-urlpatterns+=router.url
+urlpatterns+=router.urls

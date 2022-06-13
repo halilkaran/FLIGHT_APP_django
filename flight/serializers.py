@@ -8,7 +8,7 @@ class FlightSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Flight
-        fields = ( 'id','flightNumber','operationAirlines', 'arrivalCity', 'dateOfDeparture', 'estimatedTimeofDeparture')
+        fields = ( 'id','flightNumber','operationAirlines','departureCity', 'arrivalCity', 'dateOfDeparture', 'estimatedTimeofDeparture')
 
 
 
